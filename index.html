@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Day — the Roblox online hackathon for players</title>
+<meta name="description" content="Build Day is a free online hackathon for Roblox players. Get a creative theme on Monday, build a game in Roblox Studio all week, and show it off on Friday. It doesn't have to be perfect.">
+<meta name="theme-color" content="#0b6cf0">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/rbx-favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/rbx-favicon-32.png">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top" aria-label="Build Day, back to top">
+      <img class="rbx rbx--brand" src="assets/rbx-logo.png" alt="" width="27" height="27">
+      <span class="brand__text">Build&nbsp;Day</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="#about">What is Build Day</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#signup">Sign up</a></li>
+        <li><a href="schools.html">For schools</a></li>
+      </ul>
+      <a class="btn btn--accent btn--sm nav__cta" href="#signup">Sign up free</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__top">
+
+      <p class="pill reveal">
+        <span class="pill__dot" aria-hidden="true"></span>
+        Online hackathon &middot; One week &middot; Free to enter
+      </p>
+
+      <h1 class="hero__title reveal" data-delay="1">
+        You play Roblox.<br>
+        Now <span class="mark-word">build</span> it.
+      </h1>
+
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__lead reveal" data-delay="2">
+            Build Day is a week-long hackathon for Roblox players. You get one creative
+            theme on <strong>Monday</strong>, build a game in <strong>Roblox&nbsp;Studio</strong>
+            all week, and show it off on <strong>Friday</strong>.
+          </p>
+
+          <p class="hero__note reveal" data-delay="2">
+            It doesn't have to be perfect. It just has to be yours.
+          </p>
+
+          <div class="hero__actions reveal" data-delay="3">
+            <a class="btn btn--accent btn--lg" href="#signup">
+              Sign up for Build Day
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#how">See the week</a>
+          </div>
+
+        <div class="trust reveal" data-delay="3">
+          <div class="trust__lockup">
+            <span class="trust__mark">
+              <img class="rbx" src="assets/rbx-logo.png" alt="" width="40" height="40">
+            </span>
+            <span class="trust__words">
+              <span class="trust__kicker">Built with</span>
+              <span class="trust__name">Roblox&nbsp;Studio</span>
+            </span>
+          </div>
+          <ul class="trust__facts">
+            <li>Teams of 1&ndash;5</li>
+            <li>No experience needed</li>
+            <li>Your game by Friday</li>
+          </ul>
+        </div>
+      </div>
+
+        <div class="hero__art reveal" data-delay="2">
+          <!-- Fake Roblox Studio window, pure CSS -->
+          <div class="studio" role="img" aria-label="A Roblox Studio window showing a game being built in the Explorer panel, a blocky 3D scene, and a script.">
+            <div class="studio__bar">
+              <span class="dot dot--r" aria-hidden="true"></span>
+              <span class="dot dot--y" aria-hidden="true"></span>
+              <span class="dot dot--g" aria-hidden="true"></span>
+              <span class="studio__app" aria-hidden="true">
+                <img class="rbx" src="assets/rbx-logo.png" alt="" width="15" height="15">
+              </span>
+              <span class="studio__tabs">
+                <b class="is-on">Explore</b><b>Script</b><b>Test</b>
+              </span>
+            </div>
+
+            <div class="studio__body">
+              <div class="studio__panel studio__panel--left">
+                <p class="panel__title">Explorer</p>
+                <ul class="tree">
+                  <li><span class="i i--earth"></span>Workspace</li>
+                  <li class="tree__kid"><span class="i i--part"></span>Baseplate</li>
+                  <li class="tree__kid"><span class="i i--part"></span>SpawnLocation</li>
+                  <li><span class="i i--earth"></span>Lighting</li>
+                  <li><span class="i i--folder"></span>ReplicatedStorage</li>
+                  <li><span class="i i--folder"></span>ServerScriptService</li>
+                </ul>
+                <p class="panel__title panel__title--2">Properties</p>
+                <dl class="props">
+                  <div><dt>Name</dt><dd>Baseplate</dd></div>
+                  <div><dt>Class</dt><dd>Part</dd></div>
+                  <div><dt>Color</dt><dd><i class="swatch"></i></dd></div>
+                  <div><dt>Size</dt><dd>512 20 512</dd></div>
+                </dl>
+              </div>
+
+              <div class="studio__viewport">
+                <div class="scene" aria-hidden="true">
+                  <div class="scene__ground"></div>
+                  <div class="cube cube--a" style="--w:44px;--h:44px;--c:#ffc72c;--c2:#d99b00;--x:37%;--y:46%;--d:0s">
+                    <i class="f f--front"></i><i class="f f--top"></i><i class="f f--side"></i>
+                  </div>
+                  <div class="cube cube--b" style="--w:30px;--h:66px;--c:#2f8bff;--c2:#1c5fc0;--x:21%;--y:30%;--d:.6s">
+                    <i class="f f--front"></i><i class="f f--top"></i><i class="f f--side"></i>
+                  </div>
+                  <div class="cube cube--c" style="--w:36px;--h:36px;--c:#12b3a8;--c2:#0b7d78;--x:58%;--y:32%;--d:1.2s">
+                    <i class="f f--front"></i><i class="f f--top"></i><i class="f f--side"></i>
+                  </div>
+                  <div class="cube cube--d" style="--w:24px;--h:24px;--c:#0b6cf0;--c2:#0a4fb4;--x:47%;--y:56%;--d:1.8s">
+                    <i class="f f--front"></i><i class="f f--top"></i><i class="f f--side"></i>
+                  </div>
+                </div>
+                <pre class="code" aria-hidden="true"><span class="c--com">-- jump higher when touched</span>
+  <span class="c--kw">local function</span> <span class="c--fn">onTouched</span>(hit)
+    <span class="c--kw">local</span> humanoid = hit.Parent:FindFirstChild(<span class="c--str">"Humanoid"</span>)
+    humanoid.JumpPower = <span class="c--num">75</span>
+  <span class="c--kw">end</span></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live countdown -->
+          <div class="countdown" id="countdown">
+            <p class="countdown__label" id="countdown-label">Theme drops in</p>
+            <div class="countdown__grid" id="countdown-grid" aria-live="polite">
+              <div class="countdown__cell"><b data-cd="d">0</b><span>days</span></div>
+              <div class="countdown__cell"><b data-cd="h">0</b><span>hrs</span></div>
+              <div class="countdown__cell"><b data-cd="m">0</b><span>min</span></div>
+              <div class="countdown__cell"><b data-cd="s">0</b><span>sec</span></div>
+            </div>
+            <p class="countdown__date" id="countdown-date">Loading date&hellip;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= TICKER ============================= -->
+  <div class="ticker" aria-label="The week at a glance">
+    <div class="ticker__track">
+      <ul class="ticker__list">
+        <li>Monday &mdash; theme drop</li><li>Tue &amp; Wed &mdash; build</li>
+        <li>Thursday &mdash; playtest with friends</li><li>Friday &mdash; submit &amp; showcase</li>
+        <li>Sunday &mdash; we&rsquo;re still playing your games</li>
+      </ul>
+      <ul class="ticker__list" aria-hidden="true">
+        <li>Monday &mdash; theme drop</li><li>Tue &amp; Wed &mdash; build</li>
+        <li>Thursday &mdash; playtest with friends</li><li>Friday &mdash; submit &amp; showcase</li>
+        <li>Sunday &mdash; we&rsquo;re still playing your games</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======================= 01 · WHAT IS BUILD DAY ======================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span>01</span> What is Build Day</p>
+        <h2 class="sec-head__title">A whole week to make a game that&rsquo;s <em>yours</em>.</h2>
+        <p class="sec-head__lead">
+          Roblox is full of players who never stopped to ask how those games got made.
+          Build Day is the week we answer that. You get a creative theme, a real deadline,
+          and Roblox&nbsp;Studio &mdash; the free tool behind every experience you already play.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card card--yellow reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <h3>One theme, five days</h3>
+          <p>Every Monday a brand-new creative challenge drops. It&rsquo;s the only rule: your
+             game has to fit the theme. A surprise twist lands mid-week so you have to keep building.</p>
+          <p class="card__tag">Mon &rarr; Fri</p>
+        </article>
+
+        <article class="card card--teal reveal" data-delay="1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+          </span>
+          <h3>You learn Studio for real</h3>
+          <p>Place and move parts, write scripts in Luau, shape terrain, build a UI, then publish
+             a place other people can actually play. By Friday you actually know Studio.</p>
+          <p class="card__tag">Build &middot; Script &middot; Publish</p>
+        </article>
+
+        <article class="card card--accent reveal" data-delay="2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M18 16l.9 2.3L21 19l-2.1.8L18 22l-.9-2.2L15 19l2.1-.7L18 16z"/></svg>
+          </span>
+          <h3>It doesn&rsquo;t have to be perfect</h3>
+          <p>Grey boxes welcome. Default textures absolutely welcome. The reward for Build Day
+             isn&rsquo;t a trophy &mdash; it&rsquo;s the skills you keep afterwards.</p>
+
+          <div class="meter" role="img" aria-label="How polished your game needs to be: about ten percent">
+            <div class="meter__fill"></div>
+            <span class="meter__flag">you are here</span>
+          </div>
+          <p class="meter__note">Required level of polish. Nobody has ever hit it.</p>
+        </article>
+      </div>
+
+      <dl class="statbar reveal">
+        <div class="statbar__item"><dt>5</dt><dd>days to build</dd></div>
+        <div class="statbar__item"><dt>1</dt><dd>surprise theme</dd></div>
+        <div class="statbar__item"><dt>1&ndash;5</dt><dd>players per team</dd></div>
+        <div class="statbar__item"><dt>$0</dt><dd>to take part</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ========================= 02 · HOW IT WORKS ========================= -->
+  <section class="section section--band" id="how">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow eyebrow--light"><span>02</span> How it works</p>
+        <h2 class="sec-head__title">Monday to Friday, here&rsquo;s the whole week.</h2>
+        <p class="sec-head__lead">
+          Build in your own time &mdash; every day opens with a 15-minute live kickoff,
+          and everything is recorded if you miss it. Tap a day to see what you&rsquo;ll be doing.
+        </p>
+      </div>
+
+      <div class="week reveal">
+        <div class="week__tabs" role="tablist" aria-label="Days of Build Day">
+          <!-- buttons injected by script.js so dates stay current -->
+        </div>
+
+        <div class="week__panels">
+          <!-- panels injected by script.js -->
+        </div>
+      </div>
+
+      <!-- Roblox brand moment -->
+      <div class="brandband reveal">
+        <span class="brandband__mark" aria-hidden="true">
+          <img class="rbx" src="assets/rbx-logo.png" alt="" width="54" height="54">
+        </span>
+        <div class="brandband__copy">
+          <p class="brandband__title">Made in Roblox Studio</p>
+          <p class="brandband__sub">The same free tool behind every game you already play. Download it once
+             and you can build all week &mdash; then keep building long after Build Day ends.</p>
+        </div>
+        <a class="btn btn--ghost brandband__btn" href="#signup">Save my spot</a>
+      </div>
+
+      <!-- Why join -->
+      <div class="why">
+        <h3 class="why__title reveal">So why would I do this if I only play Roblox?</h3>
+        <div class="why__grid">
+          <article class="why__card reveal">
+            <span class="why__num" aria-hidden="true">01</span>
+            <h4>Because you want a challenge</h4>
+            <p>A theme you didn&rsquo;t pick, five days on the clock, and something to prove.
+               Player or builder &mdash; there is no participation trophy in Build Day,
+               so go try to win it.</p>
+          </article>
+          <article class="why__card reveal" data-delay="1">
+            <span class="why__num" aria-hidden="true">02</span>
+            <h4>Because you want to build with other people</h4>
+            <p>Team up with friends, or tell us you&rsquo;re solo and we&rsquo;ll match you with
+               other players who signed up. Build nights, feedback threads, and someone
+               to scream at when the script breaks.</p>
+          </article>
+        </div>
+        <p class="why__foot reveal">
+          Teams are optional. Solo entries get the exact same theme, the same week and the same showcase slot.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 3 · SIGN UP ============================ -->
+  <section class="section section--signup" id="signup">
+    <div class="container signup">
+      <div class="signup__copy">
+        <p class="eyebrow reveal"><span>03</span> Sign up</p>
+        <h2 class="sec-head__title reveal">Save your spot. It takes a minute.</h2>
+        <p class="sec-head__lead reveal">
+          Free, open to first-timers, and you can switch teams later. Sign up and you&rsquo;ll get
+          the theme email, the starter files, and a place in a build room full of people
+          doing the exact same thing.
+        </p>
+
+        <ul class="perks reveal">
+          <li><span aria-hidden="true">✓</span> The Monday theme plus a build-plan template</li>
+          <li><span aria-hidden="true">✓</span> Starter Studio files so you never start from zero</li>
+          <li><span aria-hidden="true">✓</span> A build room with other players and daily check-ins</li>
+          <li><span aria-hidden="true">✓</span> A showcase slot on Friday night</li>
+          <li><span aria-hidden="true">✓</span> Skills that stay with you after the week ends</li>
+        </ul>
+
+        <div class="faq reveal">
+          <h3>Questions</h3>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">
+              I&rsquo;ve never opened Studio. Is that a problem?
+              <span class="faq__chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>
+              Nope &mdash; most people who sign up have never opened it. Day one is an
+              hour-long walkthrough that gets you from a blank baseplate to something moving.
+            </p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">
+              Do I have to be in a team?
+              <span class="faq__chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>
+              No. Teams are 1&ndash;5 people. If you tick &ldquo;match me&rdquo;, we pair you with
+              other sign-ups who want the same genre and the same number of days.
+            </p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">
+              What do I actually win?
+              <span class="faq__chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>
+              The real prize is the skills: a week of actually using Roblox Studio, a finished
+              game with your name on it, and a showcase slot in front of the community. No cash
+              prizes &mdash; we&rsquo;d rather you could build again next week.
+            </p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">
+              Do I have to be on a call all week?
+              <span class="faq__chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>
+              Nope. Every kickoff and demo is recorded, and your team can decide its own hours.
+              Live build nights are optional and only run in your timezone&rsquo;s slot.
+            </p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="signup__card reveal" data-delay="1">
+        <!-- FORM -->
+        <form class="form" id="signup-form" novalidate>
+          <h3 class="form__title">Build Day sign-up</h3>
+
+          <div class="field">
+            <label for="username">Roblox username</label>
+            <input type="text" id="username" name="username" placeholder="e.g. BuilderBlox99"
+                   autocomplete="nickname" spellcheck="false" required>
+            <p class="field__err" data-err-for="username"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"
+                   autocomplete="email" required>
+            <p class="field__err" data-err-for="email"></p>
+          </div>
+
+          <fieldset class="field">
+            <legend>Have you used Roblox Studio before?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="exp" value="Never opened it" checked><span>Never opened it</span></label>
+              <label class="choice"><input type="radio" name="exp" value="Tried it once"><span>Tried it once</span></label>
+              <label class="choice"><input type="radio" name="exp" value="I build already"><span>I build already</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Who are you building with?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="team" value="Just me" checked><span>Just me</span></label>
+              <label class="choice"><input type="radio" name="team" value="Friends I know"><span>Friends I know</span></label>
+              <label class="choice"><input type="radio" name="team" value="Match me with people"><span>Match me with people</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Pick one or more things you&rsquo;d like to build <small>(choose at least one)</small></legend>
+            <div class="choices choices--wrap">
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Obby"><span>Obby</span></label>
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Tycoon"><span>Tycoon</span></label>
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Simulator"><span>Simulator</span></label>
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Story or RPG"><span>Story / RPG</span></label>
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Social hangout"><span>Social hangout</span></label>
+              <label class="choice choice--pill"><input type="checkbox" name="genre" value="Surprise me"><span>Surprise me</span></label>
+            </div>
+            <p class="field__err" data-err-for="genre"></p>
+          </fieldset>
+
+          <button class="btn btn--accent btn--lg btn--block" type="submit">
+            Sign me up
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__fine">No spam, no selling your email. You can drop out any time before Friday.</p>
+          <p class="form__err" data-err-for="form" role="alert"></p>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="done" id="signup-done" hidden>
+          <div class="done__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          </div>
+          <h3>You&rsquo;re in<span class="done__name" id="done-name"></span>.</h3>
+          <p class="done__lead">The Monday theme is heading to your inbox, and you&rsquo;re on the
+             build-room list. Here&rsquo;s what we saved:</p>
+          <ul class="done__list" id="done-list"></ul>
+          <div class="done__next">
+            <p class="done__next-title">What happens next</p>
+            <ol>
+              <li>Monday &mdash; theme drop email with your build plan template.</li>
+              <li>Tuesday &mdash; starter files and your build room invite.</li>
+              <li>Friday &mdash; submit link, then the showcase.</li>
+            </ol>
+          </div>
+          <button class="btn btn--ghost btn--block" type="button" id="signup-edit">Edit my sign-up</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="rbx rbx--footer" src="assets/rbx-logo.png" alt="" width="23" height="23">
+        <p class="site-footer__tag">Five days. One theme. A game that&rsquo;s yours.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#about">What is Build Day</a>
+        <a href="#how">How it works</a>
+        <a href="#signup">Sign up</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </div>
+    <p class="site-footer__legal container">
+      Build Day is a hackathon concept for Roblox players. Roblox and Studio are trademarks of Roblox Corporation.
+    </p>
+  </footer>
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
